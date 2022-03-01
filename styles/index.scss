@@ -1,0 +1,121 @@
+@use 'fonts';
+
+body {
+    background-color: black;
+    color: fonts.$fontcolor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        min-width: 320px;
+        max-width: 1440px;
+        width: 100%;
+    }    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    min-height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    .header__logo {
+        font-size: fonts.$logosize;
+        font-family: fonts.$logosmallfont;
+        line-height: 36px;
+        letter-spacing: -0.25px;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav {
+        min-width: 42px;
+        min-height:42px;
+    }
+    a:hover {
+        transform: scale(1.3);
+    }
+}
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    align-items: center;
+    justify-content: space-evenly;
+    .main__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__content--heading {
+        font-family: fonts.$headingfont;
+        font-size: fonts.$headingsmallsize;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: -0.8px;
+        text-align: center;
+    }
+    .main__content--text {
+        font-family: fonts.$textfont;
+        font-size: fonts.$textsmallsize;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 18px;
+        text-align: center;
+        max-width: 40%
+    }
+    .main__img {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+        img {
+            max-width: 40%;
+            display: flex;
+            justify-self: center;
+        }    
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .header__nav--small {
+        visibility: visible;
+    }
+    .header__nav--med {
+        visibility: hidden;
+    }
+    .header__nav--big {
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 1000px) {
+    .main__content--text {
+        font-size: fonts.$textbigsize;
+    }
+    .main__content--heading {
+        font-size: fonts.$headingmedsize;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .main__content--heading {
+        font-size: fonts.$headingbigsize;
+    }
+}
+
+
+
