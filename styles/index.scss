@@ -22,6 +22,8 @@ header {
     display: flex;
     flex-direction: row;
     min-height: 70px;
+    max-width: 100%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     .header__logo {
@@ -50,7 +52,6 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
     min-height: 100vh;
-    
     align-items: center;
     justify-content: space-evenly;
     .main__content {
@@ -83,7 +84,7 @@ main {
         max-width: 100%;
         width: 100%;
         img {
-            max-width: 40%;
+            
             display: flex;
             justify-self: center;
         }    
@@ -94,6 +95,7 @@ main {
     .header__nav--small {
         visibility: visible;
     }
+
     .header__nav--med {
         visibility: hidden;
     }
@@ -111,7 +113,10 @@ main {
     }
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1001px) and (orientation: landscape) {
+    .main {
+        flex-direction: row;
+    }
     .main__content--heading {
         font-size: fonts.$headingbigsize;
     }

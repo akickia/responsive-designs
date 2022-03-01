@@ -40,6 +40,8 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   min-height: 70px;
+  max-width: 100%;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -132,7 +134,6 @@ main .main__img {
   width: 100%;
 }
 main .main__img img {
-  max-width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +163,14 @@ main .main__img img {
     font-size: 72px;
   }
 }
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1001px) and (orientation: landscape) {
+  .main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
   .main__content--heading {
     font-size: 84px;
   }

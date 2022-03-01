@@ -37,7 +37,15 @@
                 <h1 class="main__content--heading">Musician</h1>
                 <p class="main__content--text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcor.</p>
             </div>
-            <div class="main__img"><img src="images/musician.jpg" alt="man in black looking thoughtful"> </div>
+            <div class="main__img">
+                <picture>
+                    <source media="(max-width: 399px)" srcset="images/musician-small.png">
+                    <source media="(min-width: 400px)" srcset="images/musician-medium.png">
+                    <source media="(min-width: 1000px)" srcset="images/musician-big.png">
+                    <img src="images/musician.jpg" alt="man in black looking thoughtful"> 
+                </picture>
+            </div>
+        
         </main>
     </section>
 </body>
