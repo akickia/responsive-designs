@@ -18,7 +18,7 @@ body {
     }    
 }
 
-header {
+.header {
     display: flex;
     flex-direction: row;
     min-height: 70px;
@@ -32,18 +32,34 @@ header {
         line-height: 36px;
         letter-spacing: -0.25px;
     }
+    .nav {
+        display: flex;
+        flex-direction: row;
+    }
     ul {
         list-style-type: none;
         display: flex;
+        width: 100%;
         justify-content: space-between;
+        min-width: none;
+        font-family: fonts.$navfont;
+        font-size: fonts.$navsize;
     }
-    .nav {
+    li:hover {
+        transform: scale(1.8);
+        }
+    .header__nav--small {
         min-width: 42px;
         min-height:42px;
+        :hover {
+            transform: scale(1.8)
+        }
     }
-    a:hover {
-        transform: scale(1.3);
+    a {
+        text-decoration: none;
+        color: white;
     }
+
 }
 
 
@@ -81,8 +97,7 @@ main {
     .main__img {
         display: flex;
         justify-content: center;
-        max-width: 100%;
-        width: 100%;
+        
         img {
             
             display: flex;
@@ -95,7 +110,6 @@ main {
     .header__nav--small {
         visibility: visible;
     }
-
     .header__nav--med {
         visibility: hidden;
     }

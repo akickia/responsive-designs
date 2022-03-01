@@ -31,7 +31,7 @@ body .container {
   width: 100%;
 }
 
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,28 +49,49 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header .header__logo {
+.header .header__logo {
   font-size: 24px;
   font-family: "Baloo Tammudu 2", cursive;
   line-height: 36px;
   letter-spacing: -0.25px;
 }
-header ul {
+.header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.header ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-width: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
 }
-header .nav {
+.header li:hover {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+.header .header__nav--small {
   min-width: 42px;
   min-height: 42px;
 }
-header a:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+.header .header__nav--small :hover {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+.header a {
+  text-decoration: none;
+  color: white;
 }
 
 main {
@@ -130,8 +151,6 @@ main .main__img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 100%;
-  width: 100%;
 }
 main .main__img img {
   display: -webkit-box;

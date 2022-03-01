@@ -7,29 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Actor&family=Baloo+Tammudu+2:wght@800&family=Poppins:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>Musician</title>
 </head>
 <body>
     <section class="container">
-        <header>
+        <header class="header">
             <div class="header__logo logo">Head.</div>
-            <nav class="header__nav--big nav">
+            <div class="nav header__nav--big">
+                <nav>
                 <ul>
                     <li><a href="#">Works</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contacts</a></li>
                 </ul>
-            </nav>
-            <nav class="header__nav--med nav">
-                <ul>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
+                </nav>
+            </div>
+            <div class="nav header__nav--med">
+                <nav>
+                    <ul>
+                        <li><a href="#">Link Item</a></li>
+                        <li><a href="#">Link Item</a></li>
+                        <li><a href="#">Link Item</a></li>
+                    </ul>
+                    </nav>
+            </div>
             <div class="header__nav--small">
-                <a href=#><img src="images/Icon.png"></a>
+                    <a href=#><img src="images/Icon.png"></a>
+                </div>
             </div>
         </header>
         <main>
@@ -39,9 +45,9 @@
             </div>
             <div class="main__img">
                 <picture>
-                    <source media="(max-width: 399px)" srcset="images/musician-small.png">
-                    <source media="(min-width: 400px)" srcset="images/musician-medium.png">
-                    <source media="(min-width: 1000px)" srcset="images/musician-big.png">
+                    <source media="(max-width: 399px)" srcset="images/musician-small.png 1x">
+                    <source media="(min-width: 400px)" srcset="images/musician-medium.png 1x">
+                    <source media="(min-width: 1000px)" srcset="images/musician-big.png 1x">
                     <img src="images/musician.jpg" alt="man in black looking thoughtful"> 
                 </picture>
             </div>
